@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1>🌤️ Weather Dashboard</h1>
+      <div class="header-controls">
+        <button id="locationBtn" class="btn-location" title="Use current location">📍 Current Location</button>
+        <button id="unitToggle" class="btn-unit">°C / °F</button>
+      </div>
+    </header>
+
+    <!-- Search Section -->
+    <div class="search-section">
+      <div class="search-container">
+        <input 
+          type="text" 
+          id="searchInput" 
+          class="search-input" 
+          placeholder="Search city name..." 
+          autocomplete="off"
+        >
+        <button id="searchBtn" class="btn-search">🔍 Search</button>
+      </div>
+      <div id="suggestions" class="suggestions"></div>
+    </div>
+
+    <!-- Saved Locations -->
+    <div class="saved-locations">
+      <h3>Saved Locations</h3>
+      <div id="savedLocationsList" class="locations-list"></div>
+    </div>
+
+    <!-- Current Weather Section -->
+    <div class="current-weather">
+      <div id="weatherCard" class="weather-card">
+        <div class="loading">Loading weather data...</div>
+      </div>
+    </div>
+
+    <!-- 5-Day Forecast Section -->
+    <div class="forecast-section">
+      <h2>5-Day Forecast</h2>
+      <div id="forecastContainer" class="forecast-grid">
+        <div class="loading">Loading forecast...</div>
+      </div>
+    </div>
+
+    <!-- Additional Details -->
+    <div class="details-section">
+      <h2>More Details</h2>
+      <div id="detailsContainer" class="details-grid">
+        <div class="loading">Loading details...</div>
+      </div>
+    </div>
+
+    <!-- Error Message -->
+    <div id="errorMessage" class="error-message"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
